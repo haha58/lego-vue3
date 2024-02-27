@@ -1,7 +1,7 @@
 import { TextTemplateProps } from '@/ts/defaultTemplate'
 import { v4 as uuidv4 } from 'uuid'
 
-export const defaultTextTemplates: Array<Partial<TextTemplateProps>> = [
+export const defaultTextTemplates: Array<TextTemplateProps> = [
   {
     id: uuidv4(),
     text: '大标题',
