@@ -5,19 +5,16 @@
 </template>
 
 <script lang="ts">
-import { textDefaultProps, transformStyleNames } from '@/contant/defaultProps'
+import { textDefaultProps, transformStyleNames } from '@/const/config'
 import useComponentCommon from '@/hooks/useComponentCommon'
-import { transformToComponentProps } from '@/ts/defaultProps'
-import { defineComponent } from 'vue'
+import { TextTagProps, transformToComponentProps } from '@/ts/defaultProps'
+import { defineComponent, PropType } from 'vue'
 const defaultProps = transformToComponentProps(textDefaultProps)
 
 export default defineComponent({
   name: 'LText',
   props: {
-    tag: {
-      type: String,
-      default: 'div'
-    },
+    tag: { type: String as PropType<TextTagProps>, required: true, default: 'div' },
     ...defaultProps
   },
   setup(props) {
