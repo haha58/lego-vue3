@@ -1,6 +1,7 @@
-import { TextComponentProps } from './defaultProps'
+import { TextComponentProps, TextTagProps } from './defaultProps'
 
-export interface TextTemplateProps extends TextComponentProps {
+interface RequiredTextComponentProps {
   id: string
-  tag: string
+  tag: TextTagProps
 }
+export type TextTemplateProps = Partial<TextComponentProps> & RequiredTextComponentProps
