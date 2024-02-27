@@ -14,7 +14,7 @@ const defaultProps = transformToComponentProps(textDefaultProps)
 export default defineComponent({
   name: 'LText',
   props: {
-    tag: { type: String as PropType<TextTagProps>, required: true, default: 'div' },
+    tag: { type: String as PropType<TextTagProps>, required: false, default: 'div' },
     ...defaultProps
   },
   setup(props) {
