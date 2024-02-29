@@ -88,11 +88,16 @@ const editor: Module<EditorProps, GloabalDataProps> = {
     },
     [UPDATECOMPONENT](
       state: EditorProps,
-      payload: { key: keyof TextComponentProps; value: string }
+      payload: { key: keyof TextComponentProps; value: string; id: string }
     ) {
-      const { key, value } = payload
-      const _currentElement = state.components.find(item => item.id === state.currentElementId)
-      _currentElement?.props && (_currentElement!.props[key] = value)
+      const { key, value, id } = payload
+      const updatedComponent = state.components.find(
+        component => component.id === (id || state.currentElementId)
+      )
+      if (updatedComponent) {
+        updatedComponent?.props && (updatedComponent!.props[key] = value)
+      }
+      console.log('wwww', state.components)
     }
   },
   getters: {

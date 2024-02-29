@@ -73,6 +73,10 @@ export const mapPropsToForms: any = {
     componentName: 'color-picker',
     text: '字体颜色'
   },
+  backgroundColor: {
+    componentName: 'color-picker',
+    text: '背景颜色'
+  },
   width: {
     text: '宽度',
     ...pxToNumberHandler
