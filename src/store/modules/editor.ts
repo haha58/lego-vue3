@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { v4 as uuidv4 } from 'uuid'
 import { Module } from 'vuex'
 import { GloabalDataProps } from '..'
@@ -92,7 +93,6 @@ const editor: Module<EditorProps, GloabalDataProps> = {
       const { key, value } = payload
       const _currentElement = state.components.find(item => item.id === state.currentElementId)
       _currentElement?.props && (_currentElement!.props[key] = value)
-      console.log('_currentElement', _currentElement)
     }
   },
   getters: {

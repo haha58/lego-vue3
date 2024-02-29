@@ -34,12 +34,11 @@
     </a-layout>
   </div>
 </template>
-
+<!--记住，自定义组件没用onclick等原声的组件的事件，需要自己定义组件，这样涉及了组件传参-->
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { CloseOutlined } from '@ant-design/icons-vue'
 import store from '@/store'
-import { ComponentProps } from '@/store/modules/editor'
 import { defaultTextTemplates } from '@/contant/defaultTemplate'
 import {
   ADDCOMPONENT,
@@ -52,6 +51,7 @@ import LText from '@/components/l-text/index.vue'
 import ComponentList from './components/component-list/index.vue'
 import EditWrapper from './components/edit-wrapper/index.vue'
 import PropsTable from './components/props-table/index.tsx'
+import { ComponentProps } from '@/store/modules/editor'
 import { TextComponentProps } from '@/ts/defaultProps'
 export default defineComponent({
   name: 'EditorIndex',
@@ -73,7 +73,6 @@ export default defineComponent({
     }
     // 修改当前选中的状态
     const updateComponent = (e: { key: keyof TextComponentProps; value: string }) => {
-      console.log('e', e)
       store.commit(UPDATECOMPONENT, e)
     }
 
@@ -114,4 +113,3 @@ export default defineComponent({
   max-height: 80vh;
 }
 </style>
-./components/props-table/index.tsx
