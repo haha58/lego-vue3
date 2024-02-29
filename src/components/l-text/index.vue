@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { textDefaultProps, transformStyleNames } from '@/const/config'
+import { textDefaultProps, transformStyleNames } from '@/contant/defaultProps'
 import useComponentCommon from '@/hooks/useComponentCommon'
 import { TextTagProps, transformToComponentProps } from '@/ts/defaultProps'
 import { defineComponent, PropType } from 'vue'
