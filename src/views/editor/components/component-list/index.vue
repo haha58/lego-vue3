@@ -8,12 +8,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import LText from '@/components/l-text/index.vue'
 import { TextTemplateProps } from '@/ts/defaultTemplate'
 
 export default defineComponent({
   name: 'ComponentList',
-  components: { LText },
   props: {
     componentList: {
       type: Array<Partial<TextTemplateProps>>,

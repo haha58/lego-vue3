@@ -1,5 +1,3 @@
-import _ from 'lodash-es'
-
 export type TextTagProps = 'h2' | 'p' | 'button'
 
 export interface CommonComponentProps {
@@ -45,12 +43,4 @@ export interface TextComponentProps extends CommonComponentProps {
 // 图片 追加
 export interface ImageComponentProps extends CommonComponentProps {
   src: string
-}
-
-// 转换组件的props
-export const transformToComponentProps = (props: { [propname: string]: any }) => {
-  return _.mapValues(props, (prop: any) => ({
-    type: prop.constructor,
-    default: prop
-  }))
 }

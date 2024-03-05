@@ -8,9 +8,11 @@
  */
 import { createApp } from 'vue'
 import '@/styles/global.css'
+import LegoBricks from 'lego-momy'
 import 'ant-design-vue/dist/antd.css'
+import 'lego-momy/dist/lego-momy.esm.css'
 import App from './App.vue'
 import router from '@/routes/index'
 import store from '@/store/index'
 import Antd from 'ant-design-vue'
-createApp(App).use(Antd).use(router).use(store).mount('#app')
+createApp(App).use(Antd).use(LegoBricks).use(router).use(store).mount('#app')

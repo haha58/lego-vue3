@@ -1,5 +1,5 @@
-import { CommonComponentProps, ImageComponentProps, TextComponentProps } from '@/ts/defaultProps'
-import _ from 'lodash-es'
+import { CommonComponentProps, ImageComponentProps } from '@/ts/defaultProps'
+
 export const commonDefaultProps: CommonComponentProps = {
   // actions
   actionType: '',
@@ -26,31 +26,7 @@ export const commonDefaultProps: CommonComponentProps = {
   right: '0'
 }
 
-// 字体
-export const textDefaultProps: TextComponentProps = {
-  // basic props - font styles
-  text: '正文内容',
-  fontSize: '14px',
-  fontFamily: '',
-  fontWeight: 'normal',
-  fontStyle: 'normal',
-  textDecoration: 'none',
-  lineHeight: '1',
-  textAlign: 'left',
-  color: '#000000',
-  backgroundColor: '',
-  ...commonDefaultProps
-}
-
 export const imageDefaultProps: ImageComponentProps = {
   src: 'test.url',
   ...commonDefaultProps
 }
-
-// 排除'text','actionType','url'，默认style样式的名字
-export const transformStyleNames = _.without(
-  Object.keys(textDefaultProps),
-  'text',
-  'actionType',
-  'url'
-)

@@ -77,6 +77,7 @@ const editor: Module<EditorProps, GloabalDataProps> = {
   },
   mutations: {
     [ADDCOMPONENT](state: EditorProps, componentData: ComponentProps) {
+      componentData.id = uuidv4()
       state.components.push(componentData)
     },
     [DELCOMPONENT](state: EditorProps, id: string) {
@@ -97,7 +98,6 @@ const editor: Module<EditorProps, GloabalDataProps> = {
       if (updatedComponent) {
         updatedComponent?.props && (updatedComponent!.props[key] = value)
       }
-      console.log('wwww', state.components)
     }
   },
   getters: {

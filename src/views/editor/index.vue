@@ -47,7 +47,6 @@ import {
   SETCURRENTCOMPONENTID,
   UPDATECOMPONENT
 } from '@/store/mutation-type'
-import LText from '@/components/l-text/index.vue'
 import ComponentList from './components/component-list/index.vue'
 import EditWrapper from './components/edit-wrapper/index.vue'
 import PropsTable from './components/props-table/index.tsx'
@@ -55,7 +54,7 @@ import { ComponentProps } from '@/store/modules/editor'
 import { TextComponentProps } from '@/ts/defaultProps'
 export default defineComponent({
   name: 'EditorIndex',
-  components: { LText, ComponentList, EditWrapper, PropsTable, CloseOutlined },
+  components: { ComponentList, EditWrapper, PropsTable, CloseOutlined },
   setup() {
     const components = computed<ComponentProps[]>(() => store.state.editor.components)
     const currentElement = computed<ComponentProps>(() => store.getters[SETCURRENTCOMPONENT]())
