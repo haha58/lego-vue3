@@ -3,7 +3,7 @@
     <a-layout>
       <a-layout-sider width="300" style="background: #fff">
         <div class="sidebar-container">
-          <ComponentList :component-list="defaultTextTemplates" @on-item-click="addComponent" />
+          <ComponentList @on-item-click="addComponent" />
         </div>
       </a-layout-sider>
       <a-layout style="padding: 0 24px 24px">
@@ -52,6 +52,7 @@ import EditWrapper from './components/edit-wrapper/index.vue'
 import PropsTable from './components/props-table/index.tsx'
 import { ComponentProps } from '@/store/modules/editor'
 import { TextComponentProps } from '@/ts/defaultProps'
+
 export default defineComponent({
   name: 'EditorIndex',
   components: { ComponentList, EditWrapper, PropsTable, CloseOutlined },
@@ -60,6 +61,7 @@ export default defineComponent({
     const currentElement = computed<ComponentProps>(() => store.getters[SETCURRENTCOMPONENT]())
     // 添加组件
     const addComponent = (componentData: ComponentProps) => {
+      /*  */
       store.commit(ADDCOMPONENT, componentData)
     }
     // 删除组件

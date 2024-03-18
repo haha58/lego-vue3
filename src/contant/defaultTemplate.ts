@@ -1,4 +1,4 @@
-import { TextTemplateProps } from '@/ts/defaultTemplate'
+import { ImageTemplateProps, TextTemplateProps } from '@/ts/defaultTemplate'
 import { v4 as uuidv4 } from 'uuid'
 
 export const defaultTextTemplates: Array<TextTemplateProps> = [
@@ -29,3 +29,22 @@ export const defaultTextTemplates: Array<TextTemplateProps> = [
     textAlign: 'center'
   }
 ]
+export const imgSourceList = [
+  'http://static.imooc-lego.com/upload-files/logo-white-735536.png',
+  'http://static.imooc-lego.com/upload-files/logo-black-049885.png',
+  'http://static.imooc-lego.com/upload-files/528w-0ilmEQMomZ8-108048.png',
+  'http://static.imooc-lego.com/upload-files/frame-096161.png',
+  'http://static.imooc-lego.com/upload-files/text-449964.png',
+  'http://static.imooc-lego.com/upload-files/text2-288504.png',
+  'http://static.imooc-lego.com/upload-files/money-664239.png',
+  'http://static.imooc-lego.com/upload-files/bag-904186.png',
+  'http://static.imooc-lego.com/upload-files/text3-086652.png',
+  'http://static.imooc-lego.com/upload-files/text4-145592.png'
+]
+export const defaultImageTemplates: Array<ImageTemplateProps> = imgSourceList.map(url => {
+  return {
+    id: uuidv4(),
+    src: url,
+    width: '150px'
+  }
+})

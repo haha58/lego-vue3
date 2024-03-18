@@ -42,5 +42,5 @@ export interface TextComponentProps extends CommonComponentProps {
 
 // 图片 追加
 export interface ImageComponentProps extends CommonComponentProps {
-  src: string
+  imgSrc: string
 }
