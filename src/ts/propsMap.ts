@@ -24,6 +24,8 @@ export interface PropsToForm {
   afterTransform?: (v: any) => any
   // 触发事件的名称
   eventName?: string
+  // 该属性有可能和其他联动，由改父属性控制它的行为
+  parent?: string
   // 事件
   events?: { [key: string]: (e: any) => void }
 }

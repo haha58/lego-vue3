@@ -9,8 +9,21 @@ export const defaultTextTemplates: Array<TextTemplateProps> = [
     fontWeight: 'bold',
     tag: 'h2'
   },
+  {
+    id: uuidv4(),
+    text: '楷体副标题',
+    fontSize: '20px',
+    fontWeight: 'bold',
+    fontFamily: '"KaiTi","STKaiti"',
+    tag: 'h2'
+  },
+  { id: uuidv4(), text: '宋体正文内容', tag: 'p', fontFamily: '"SimSun","STSong"' },
   { id: uuidv4(), text: '正文内容', tag: 'p' },
   { id: uuidv4(), text: '链接内容', color: '#1890ff', textDecoration: 'underline', tag: 'p' },
+  { id: uuidv4(), text: 'Arial style', tag: 'p', fontFamily: '"Arial", sans-serif' },
+  { id: uuidv4(), text: 'Comic Sans', tag: 'p', fontFamily: '"Comic Sans MS"' },
+  { id: uuidv4(), text: 'Courier New', tag: 'p', fontFamily: '"Courier New", monospace' },
+  { id: uuidv4(), text: 'Times New Roman', tag: 'p', fontFamily: '"Times New Roman", serif' },
   {
     id: uuidv4(),
     text: '按钮内容',
